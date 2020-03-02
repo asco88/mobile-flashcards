@@ -2,8 +2,8 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
-import HomeScreen from './HomeScreen';
-import LinksScreen from './LinksScreen';
+import Deck from './Deck'
+import AddCard from './AddCard';
 
 
 const BottomTab = createBottomTabNavigator();
@@ -16,7 +16,7 @@ export default function BottomTabNavigator({ navigation, route }) {
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
       <BottomTab.Screen
         name="Decks"
-        component={HomeScreen}
+        component={Deck}
         options={{
           title: 'Decks',
           tabBarIcon: ({ focused }) => getTabBarIcon("md-code-working", focused),
@@ -24,7 +24,7 @@ export default function BottomTabNavigator({ navigation, route }) {
       />
       <BottomTab.Screen
         name="Add"
-        component={LinksScreen}
+        component={AddCard}
         options={{
           title: 'Add Cards',
           tabBarIcon: ({ focused }) => getTabBarIcon("md-book", focused),
@@ -48,8 +48,8 @@ function getHeaderTitle(route) {
 
   switch (routeName) {
     case 'Decks':
-      return 'Deck';
+      return 'Deck   ';
     case 'Add':
-      return 'Add Card';
+      return 'Add Card   ';
   }
 }

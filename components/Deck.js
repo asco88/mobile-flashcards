@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 
-export default function LinksScreen() {
+export default function Deck() {
   return (
     <View>
-      <Text>Add Card</Text>
+      <Text>Deck</Text>
     </View>
   );
 }
